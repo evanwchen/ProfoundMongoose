@@ -12,4 +12,9 @@ mongoose.connect('mongodb://localhost:27017/photodrop');
 require('./config/routes.js')(app, express);
 
 app.listen(8000);
-  console.log('Starting server. Listening on 8000');
+console.log('Starting server. Listening on 8000');
+
+module.exports = {
+  app: app,
+  db: db
+}
